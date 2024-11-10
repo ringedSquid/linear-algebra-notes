@@ -1,0 +1,93 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+Vectors are mathematical objects with a \textbf{direction} and \textbf{magnitude}. A more formal definition of a vector is that a vector is an element of a \textbf{vector space}. \\ 
+
+\noindent
+Lets work with a real-n vector $\vec{u}$:
+\begin{align}
+	\vec{u} = \begin{bmatrix}
+			u_1 \\
+			u_2 \\
+			\vdots \\
+			u_n
+		\end{bmatrix} \notag
+\end{align}
+\noindent
+The \textbf{magnitude} or \textbf{norm} or $\vec{u}$ is:
+\begin{align}
+	\norm{\vec{u}} = \sqrt{{u_1}^2 + {u_2}^2 + \hdots + {u_n}^2} \notag
+\end{align}
+\noindent
+Notice that:
+\begin{align}
+	\norm{c\vec{u}} &= \sqrt{{cu_1}^2 + {cu_2}^2 + \hdots + {cu_n}^2} \notag \\
+			&= \sqrt{c^{2}({u_1}^2 + {u_2}^2 + \hdots + {u_n}^{2})} \notag \\
+			&= c\sqrt{{u_1}^2 + {u_2}^2 + \hdots + {u_n}^2} \notag \\
+	\norm{c\vec{u}} &= c\norm{\vec{u}} \notag 
+\end{align}
+A vector with a magnitude of 1 is considered to be a \textbf{unit vector}. To turn any vector in a unit vector, also known as \textbf{normalizing} the vectorm, and essentially isolate its "direction":
+\begin{align}
+	&\vec{u}_{norm} = \frac{\vec{u}}{\norm{\vec{u}}} \notag \\
+	&\norm{\vec{u}_{norm}} = 1 \notag
+\end{align}
+
+\subsection{Vector operations}
+Adding vectors is component wise:
+\begin{align}
+	\vec{u} + \vec{v} &= \sum_{i=1}^{n} u_i + v_i \notag
+\end{align}
+\noindent
+From this definition of vector addition, for real-n vectors we can say that vector addition is \textbf{commutative} and \textbf{associative}. We can also say that scalar multiplication is \textbf{distributive} and \textbf{associative}. \\
+
+\noindent
+The dot product of two vectors is defined as:
+\begin{align}
+	\vec{u} \cdot \vec{v} = \sum_{i=1}^{n} u_{i}v_{i} \notag
+\end{align}
+\noindent
+Through this definition, we can realize some key properties of the dot product:
+\begin{align}
+	\vec{u} \cdot \vec{v} &= \vec{v} \cdot \vec{u} \notag \\
+	\vec{u} \cdot (\vec{v} + \vec{w}) &= \vec{u} \cdot \vec{v} + \vec{u} \cdot \vec{w} \notag \\
+	c\vec{u} \cdot \vec{v} &= c(\vec{u} \cdot \vec{v}) \notag \\
+	\vec{u} \cdot \vec{u} &= \norm{u}^2 \notag \\
+	\vec{u} \cdot \vec{0} &= 0 \notag
+\end{align}
+\noindent
+But lets think about this some more. We know that $\vec{v} = \begin{bmatrix} sin(\theta) \\ cos(\theta) \end{bmatrix}$ is a unit vector. (Think the pythagorean identity: $sin^{2}(\theta) + cos^{2}(\theta) = 1$). We can express every vector as its magnitude multiplied by its "direction" (its normalized version):
+\begin{align}
+	\vec{v} &= \norm{\vec{v}} \frac{\vec{v}}{\norm{\vec{v}}} \notag \\
+	\vec{v} &= \norm{\vec{v}} \begin{bmatrix} sin(\alpha) \\ cos(\alpha) \end{bmatrix} \notag
+\end{align}
+\noindent
+Now lets introduce another vector $\vec{u} = \norm{\vec{u}} \begin{bmatrix} sin(\beta) \\ cos(\beta) \end{bmatrix}$
+:
+\begin{align}
+	\vec{v} \cdot \vec{u} &= \norm{\vec{v}}\norm{\vec{u}} (sin(\alpha)sin(\beta) + cos(\alpha)cos(\beta)) \notag \\
+			      &= \norm{\vec{v}}\norm{\vec{u}} cos(\alpha - \beta) \notag \\
+			      \theta = \alpha - \beta \notag \\
+	\vec{v} \cdot \vec{u}  &= \norm{\vec{v}}\norm{\vec{u}} cos(\theta) \notag
+\end{align}
+\noindent
+If $\vec{u} \cdot \vec{v} = 0$, and we know that $\norm{\vec{v}}, \norm{\vec{u}} \neq 0$, then $cos(\theta) = 0$ which means $\theta = \frac{\pi}{2}$. In other words, if the dot product of two vectors is $0$, then they are \textbf{orthogonal}. \\ 
+
+\noindent
+Taking this definition further:
+\begin{align}
+	cos(\theta) = \frac{\vec{u} \cdot \vec{v}}{\norm{\vec{u}}\norm{\vec{v}}} \notag
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+

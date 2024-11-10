@@ -1,0 +1,27 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+\subsection{Ways to think about it}
+Given some system of $n$ equations with $m$ unknowns:
+\begin{center}
+	\begin{align}
+		a_{1,1}x_1 + a_{1,2}x_2 + ... + a_{1,m}x_m &= k_1 \\ \notag
+		a_{2,1}x_1 + a_{2,2}x_2 + ... + a_{2,m}x_m &= k_2 \\ \notag
+							   &\;\;\vdots\\ \notag
+		a_{n,1}x_1 + a_{n,2}x_2 + ... + a_{n,m}x_m &= k_n \\ \notag
+	\end{align}
+\end{center}
+We can think of each variable $x_i$ as a "degree of freedom", and each equation as a restriction on the system. Linearly combining equations not only preserves solutions, but has the ability to free up restrictions in the system. \\
+
+\noindent
+Solving this system of $n$ equations with $m$ unknowns can end in 3 distinct ways:
+\begin{enumerate}
+	\item One solution
+	\item No solutions
+	\item Infinitely many solutions
+\end{enumerate}
+But we can also describe our system as either \textbf{dependent} or \textbf{independent} and \textbf{consistent} or \textbf{inconsistent}. What do these mean? In the context of systems of equations, dependence means that there are equations inside of our system can be described as linear combinations of other equations also with the system, and independence means the opposite of this. Consistence means that there exists a solution, and inconsistence means that no solution exists.
+
+\end{document}
+
+

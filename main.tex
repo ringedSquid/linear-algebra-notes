@@ -1,0 +1,35 @@
+%! TeX root = main.tex
+\documentclass[12pt]{book}
+
+\title{Notes from Mr.Honner's Linear Algebra Class}
+\author{Kellen Yu | Stuyvesant High School}
+\date{2024 - 2024}
+
+\usepackage{systeme}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{subfiles}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\graphicspath{{images/}}
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \section{Systems of Equations}
+    \subfile{sections/SystemsOfEquations}
+    \section{Vectors}
+    \subfile{sections/Vectors}
+    \section{Plane Vectors}
+    \subfile{sections/PlaneVectors}
+    \section{More Plane Vectors}
+    \subfile{sections/MorePlaneVectors}
+    \section{Barycentric Coordinates}
+    \subfile{sections/BarycentricCoordinates}
+
+
+\end{document}
