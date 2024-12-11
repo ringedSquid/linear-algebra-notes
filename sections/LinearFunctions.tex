@@ -1,0 +1,21 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+This is a linear algebra course. But what does linear even mean? It means alot of things, but regarding functions and transformations there is a very concrete definition for linearity. 
+\subsection{Requirements of linear functions}
+Given a linear function $f:\mathbb{R}\rightarrow \mathbb{R}$, $f$ is linear if it satisfies the following:
+\begin{align}
+	c \in \mathbb{R}, \forall x : f(cx) &= cf(x) \notag \\
+	\forall x, y : f(x + y) &= f(x) + f(y) \notag
+\end{align}
+One thing we can notice is that under these conditions $f(0) = 0$ is always true. This means that the range of linear functions must contain zero. But why do we care about this? Why is knowing these conditions useful? What power do linear functions hold? \\ \\ 
+Lets look at a linear function $f:\mathbb{C}\rightarrow\mathbb{C}$. Lets say that $z$ is some complex number $a + bi$.
+\begin{align}
+	f(z) &= f(a + bi) \notag \\
+	     &= f(a + 0i) + f(0 + bi) \notag \\
+	     &= af(1) + bf(i) \notag
+\end{align}
+We can see that if we know what $f$ does to $1$ and $i$, we know what it does to all complex numbers. Within linear functions is the structure of linear combination. The result of applying a linear function can be seen as a linear combination of other functions being applied.
+\end{document}
+
+

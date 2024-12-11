@@ -1,0 +1,24 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\begin{document}
+Matrix multiplication is an interesting thing. 
+\subsection{Proving matrix multiplication is associative}
+Given three matricies A, B, and C, where A is of size $n \times r$, B is of size $r \times q$ and C is of size $q \times m$, we will show that (AB)C $=$ A(BC). Note that we can represent any element of A in the form $(a_{i,j})$ (this follows for B and C). \\ \\
+Let M be the product of A and B.
+\begin{align}
+	m_{i,j} &= \sum_{k=1}^{r} a_{i,k} \cdot b_{k,j} \notag 
+\end{align}
+Let N be the product of M and C:
+\begin{align}
+	n_{i, j} &= \sum_{l=1}^{q} m_{i,l} \cdot c_{l,j} \notag \\
+		 &= \sum_{l=1}^{q} \left(\sum_{k=1}^{r} a_{i,k} \cdot b_{k,l}\right) \cdot c_{l,j} \notag \\
+		 &= \sum_{k=1}^{r} a_{i,k} \cdot \left(\sum_{l=1}^{q} b_{k,l} \cdot c_{l,j}\right) \notag
+\end{align}
+To explain why we can sort of "pull out" the $b_{k,l}$ from its summation is simply the distributive property. $c_{l,j}$ is being multiplied by the sum $a_{i,1} \cdot b_{1,l} + a_{i,2} \cdot b_{2,l} + ...$, which would be no different from multiplying $a_{i,k}$ by the sum $b_{k,1} \cdot c_{1,j} + b_{k,1} \cdot c_{1,j} + ...$ We can see that the summation within the parentheses looks very similar to out definition to our definition of the product AB. It turns out that this is the definition of the product BC. And therefore:
+\begin{align}
+	\left(\mathrm{AB}\right)\mathrm{C} = \mathrm{A}\left(\mathrm{BC}\right) \notag
+\end{align}
+Matrix multiplication is associative.
+\end{document}
+
+
